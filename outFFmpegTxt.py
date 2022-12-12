@@ -11,5 +11,5 @@ for f in files:
         oldname = f
         newname = f.replace('.ts', '.mp4')
         f = open("./output.txt", 'a+', encoding='utf-8')
-        f.write('sudo ffmpeg -i "{}" -c:v copy -c:a aac "{}"\n'.format(oldname, newname))
+        f.write('sudo ffmpeg -i "{}" -c:v copy -c:a copy "{}"\n'.format(oldname, newname))
         f.close()
